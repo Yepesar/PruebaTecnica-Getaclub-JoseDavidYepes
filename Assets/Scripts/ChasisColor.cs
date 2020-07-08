@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class ChasisColor : MonoBehaviour
 {
+    [Header("Kart colors")]
     [SerializeField] private Material red;
     [SerializeField] private Material blue;
     [SerializeField] private Material green;
     [SerializeField] private SkinnedMeshRenderer chasisMesh;
+    [Header("PilotColors")]
+    [SerializeField] private Material pBlue;
+    [SerializeField] private Material pOrange;
+    [SerializeField] private Material pPurple;
+    [SerializeField] private SkinnedMeshRenderer pilotMesh;
 
 
     private void Start()
@@ -18,7 +24,14 @@ public class ChasisColor : MonoBehaviour
             PlayerPrefs.Save();
         }
 
+        if (!PlayerPrefs.HasKey("PilotColor"))
+        {
+            PlayerPrefs.SetInt("ChasisColor", 0);
+            PlayerPrefs.Save();
+        }
+
         SetNewColor(PlayerPrefs.GetInt("ChasisColor"));
+        SetNewPilotColor(PlayerPrefs.GetInt("PilotColor"));
     }
 
     public void SetNewColor(int index)
@@ -37,6 +50,25 @@ public class ChasisColor : MonoBehaviour
         }
 
         PlayerPrefs.SetInt("ChasisColor", index);
+        PlayerPrefs.Save();
+    }
+
+    public void SetNewPilotColor(int index)
+    {
+        if (index == 0)
+        {
+            pilotMesh.material = pBlue;
+        }
+        else if (index == 1)
+        {
+            pilotMesh.material = pOrange;
+        }
+        else if (index == 2)
+        {
+            pilotMesh.material = pPurple;
+        }
+
+        PlayerPrefs.SetInt("PilotColor", index);
         PlayerPrefs.Save();
     }
 }
