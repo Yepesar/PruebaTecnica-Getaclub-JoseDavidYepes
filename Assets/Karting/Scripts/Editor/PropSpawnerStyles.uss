@@ -1,0 +1,38 @@
+.row {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header{
+    font-size: 12px;
+    color: #2C2C2C;
+}
+
+.prefab-button{
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    justify-content:flex-end;
+}
+
+.prefab-button__icon{
+    pointer-events:none;
+}
+
+.unity-button {
+    background-image: url("/Assets/Images/button_up.png");
+}
+
+.unity-button:hover {
+    background-image: url("/Assets/Images/button_over.png");
+}
+
+.unity-button:active {
+    background-image: url("/Assets/Images/button_down.png");
+}
+
+Label{
+    font-size:12px;
+
+}

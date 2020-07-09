@@ -1,0 +1,45 @@
+<UXML xmlns="UnityEngine.UIElements">
+  <VisualElement class ="row">
+    <Label text="Choose a GameObject to place on the scene" class="header"/>
+  </VisualElement>
+  <VisualElement class ="row">
+    <Button name="TrackCamber_prefab" class="prefab-button">
+      <VisualElement name="Icon" class="prefab-button__icon" /> 
+      <Label text="Track Camber" class="prefab-button__label"/>
+    </Button>
+    <Button name="TrackCamberCurve_prefab" class="prefab-button">
+      <VisualElement name="Icon" class="prefab-button__icon" />
+      <Label text="Track Camber Curve" class="prefab-button__label"/>
+    </Button>
+  </VisualElement>
+  <VisualElement class ="row">
+    <Button name="TrackCurveBig_prefab" class="prefab-button">
+      <VisualElement name="Icon" class="prefab-button__icon" />
+      <Label text="Track Curve Big" class="prefab-button__label"/>
+    </Button>
+    <Button name="TrackCurveMedium_prefab" class="prefab-button">
+      <VisualElement name="Icon" class="prefab-button__icon" />
+      <Label text="Track Curve Medium" class="prefab-button__label"/>
+    </Button>
+  </VisualElement>
+  <VisualElement class ="row">
+    <Button name="TrackCurveSmall_prefab" class="prefab-button">
+      <VisualElement name="Icon" class="prefab-button__icon" />
+      <Label text="Track Curve Small" class="prefab-button__label"/>
+    </Button>
+    <Button name="TrackStraightShort_prefab" class="prefab-button">
+      <VisualElement name="Icon" class="prefab-button__icon" />
+      <Label text="Track Straight Short" class="prefab-button__label"/>
+    </Button>
+  </VisualElement>
+  <VisualElement class ="row">
+    <Button name="TrackToCamber_prefab" class="prefab-button">
+      <VisualElement name="Icon" class="prefab-button__icon" />
+      <Label text="Track To Camber" class="prefab-button__label"/>
+    </Button>
+    <Button name="StartFinishLine_prefab" class="prefab-button">
+      <VisualElement name="Icon" class="prefab-button__icon" />
+      <Label text="Start Finish Line" class="prefab-button__label"/>
+    </Button>
+  </VisualElement>
+</UXML>
